@@ -1,8 +1,8 @@
 # RIRS 云平台凭据与默认参数（勿提交到公共仓库）
 web_base: "http://202.114.114.19:8001"
 api_base: "http://202.114.114.19:8002"
-username: "crz"
-password: "WHU@123"
+username: ""
+password: ""
 token_cache: "~/.rirs/token.json"
 
 defaults:
