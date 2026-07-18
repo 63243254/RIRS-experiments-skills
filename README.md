@@ -10,17 +10,17 @@ Codex skill for operating the Wuhan University **RIRS** deep-learning cloud plat
 
 2. Python deps:
 
-`ash
+```bash
 pip install -r requirements.txt
 playwright install chromium
-`
+```
 
 3. Config (local only, do **not** commit):
 
-`ash
+```bash
 cp config.example.yaml config.yaml
 # edit username / password
-`
+```
 
 4. Campus network required. Platform: `http://202.114.114.19:8001`
 
@@ -28,26 +28,26 @@ cp config.example.yaml config.yaml
 
 Tell the agent, for example:
 
-`	ext
+```text
 Use RIRS experiment agent:
 - goal: train XXX
 - code: D:/research/xxx
 - data: D:/research/xxx/data
 - cmd: python train.py
-`
+```
 
 Or CLI:
 
-`powershell
- = "python"   # or your Anaconda python
- = "C:\Users\c6324\.codex\skills\rirs-experiment-agent"
-&  "\scripts\rirs_cli.py" --config "\config.yaml" login
-&  "\scripts\rirs_cli.py" --config "\config.yaml" containers
-`
+```powershell
+$py = "python"   # or your Anaconda python
+$root = "C:\Users\c6324\.codex\skills\rirs-experiment-agent"
+& $py "$root\scripts\rirs_cli.py" --config "$root\config.yaml" login
+& $py "$root\scripts\rirs_cli.py" --config "$root\config.yaml" containers
+```
 
 ## Layout
 
-`	ext
+```text
 SKILL.md                 # Codex skill instructions
 config.example.yaml      # template (safe to commit)
 config.yaml              # local secrets (gitignored)
@@ -55,12 +55,12 @@ requirements.txt
 scripts/                 # API + Playwright automation
 references/              # API & workflow notes
 agents/                  # Codex agent metadata
-`
+```
 
 ## Security
 
 - Never commit `config.yaml` or real passwords.
-- Repo should stay private if it contains any campus credentials.
+- Prefer a **private** repo if it might ever contain campus credentials.
 - Token cache default: `~/.rirs/token.json`
 
 ## Notes
