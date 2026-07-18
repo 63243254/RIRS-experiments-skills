@@ -1,0 +1,24 @@
+# RIRS 云平台凭据与默认参数（勿提交到公共仓库）
+web_base: "http://202.114.114.19:8001"
+api_base: "http://202.114.114.19:8002"
+username: "crz"
+password: "WHU@123"
+token_cache: "~/.rirs/token.json"
+
+defaults:
+  image: "pytorch:1.13_11.6_8"
+  cpu: 2
+  memory: 4
+  gpu: 1
+  workdir: "/data/user"
+  venv: "/data/user/.venv"
+  # 空闲 GPU 轮询间隔（秒）
+  gpu_poll_seconds: 1800
+  # 长任务/大数据传输巡检间隔（秒）= 15 分钟
+  long_job_poll_seconds: 900
+  # 预估超过该秒数则走后台 + 巡检
+  long_job_threshold_seconds: 600
+  # 单文件/传输超过该字节视为大数据（约 10GiB）
+  large_data_bytes: 10737418240
+  container_wait_seconds: 180
+  install_tmux: true
