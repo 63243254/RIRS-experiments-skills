@@ -1,0 +1,4 @@
+﻿interface:
+  display_name: "RIRS 实验 Agent"
+  short_description: "无 SSH 的 RIRS 云平台：容器、上传、选卡、训练"
+  default_prompt: "用 RIRS 实验 Agent 帮我在云平台上准备容器并跑实验。"

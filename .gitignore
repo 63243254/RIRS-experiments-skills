@@ -1,0 +1,19 @@
+# secrets - never commit
+config.yaml
+**/.rirs/
+**/token.json
+
+# python
+**/__pycache__/
+*.py[cod]
+*.pyo
+.Python
+.venv/
+venv/
+
+# OS / editor
+.DS_Store
+Thumbs.db
+*.swp
+.idea/
+.vscode/

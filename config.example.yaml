@@ -1,0 +1,18 @@
+web_base: "http://202.114.114.19:8001"
+api_base: "http://202.114.114.19:8002"
+username: "YOUR_USER"
+password: "YOUR_PASS"
+token_cache: "~/.rirs/token.json"
+defaults:
+  image: "pytorch:1.13_11.6_8"
+  cpu: 2
+  memory: 4
+  gpu: 1
+  workdir: "/data/user"
+  venv: "/data/user/.venv"
+  gpu_poll_seconds: 1800
+  long_job_poll_seconds: 900
+  long_job_threshold_seconds: 600
+  large_data_bytes: 10737418240
+  container_wait_seconds: 180
+  install_tmux: true
